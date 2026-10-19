@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-19T17:25:54.725476+00:00",
+  "scope": "Ten Commons file pages approved in the user-supplied handoff. Source-page assertions are distinct from decoded originals, geolocation, crop review and permission records.",
+  "evidenceNotes": "Source metadata rechecked by Astra using connected web tools; local binary and processing fields remain null/empty until acquisition succeeds. Raw file-page/API snapshots are not claimed.",
+  "assets": [
+    {
+      "id": "swat-river-kalam",
+      "roles": [
+        "home.hero",
+        "river.hero"
+      ],
+      "title": "Swat River at Kalam Valley.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Swat_River_at_Kalam_Valley.jpg",
+      "localOriginalPath": "assets/originals/river/swat-river-kalam.jpg",
+      "originalUrl": null,
+      "photographer": "Moeedayazbutt",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 3264,
+        "height": 2448,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Kalam Valley, Swat (source identification; disputed by coordinates)",
+        "status": "location-conflict",
+        "notes": [
+          "Commons source lists camera coordinates 34.912233, 73.656039; official PMD Kalam report lists 35.20, 72.55. The discrepancy needs resolution before Kalam/Swat hero use.",
+          "https://www.pmd.gov.pk/wind/KP/Kalam.pdf"
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Swat River in Kalam Valley.",
+      "caption": "The Swat River at Kalam, Swat Valley.",
+      "credit": "Photo: Moeedayazbutt / Wikimedia Commons / CC BY-SA 3.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "location conflict; unavailable for hero use",
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "mahodand-lake-primary",
+      "roles": [
+        "places.mahodand.primary"
+      ],
+      "title": "Mahodand Lake, Kalaam, Swat, KPK, Pakistan.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Mahodand_Lake,_Kalaam,_Swat,_KPK,_Pakistan.jpg",
+      "localOriginalPath": "assets/originals/places/mahodand-lake-boats.jpg",
+      "originalUrl": null,
+      "photographer": "Abeermajid1996",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 2992,
+        "height": 2000,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Mahodand Lake, Kalam area, Swat",
+        "status": "source-description-only",
+        "notes": [
+          "Named location follows the approved Commons file description; independent location confirmation is pending."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Boats on Mahodand Lake in Swat.",
+      "caption": "Boats on Mahodand Lake, in the Kalam area of Swat.",
+      "credit": "Photo: Abeermajid1996 / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "mahodand-lake-alternate",
+      "roles": [
+        "places.mahodand.alternate"
+      ],
+      "title": "Mahodand Lake is an alpine glacial lake fed by melting glaciers.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Mahodand_Lake_is_an_alpine_glacial_lake_fed_by_melting_glaciers.jpg",
+      "localOriginalPath": "assets/originals/places/mahodand-lake-alternate.jpg",
+      "originalUrl": null,
+      "photographer": "Shahzaib Damn Cruze",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 4032,
+        "height": 3024,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Mahodand Lake, Swat",
+        "status": "source-description-only",
+        "notes": [
+          "Named location follows the approved Commons file description; independent location confirmation is pending."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Mahodand Lake in Swat Valley.",
+      "caption": "Another view of Mahodand Lake, Swat Valley.",
+      "credit": "Photo: Shahzaib Damn Cruze / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "barikot-swat",
+      "roles": [
+        "places.valley-town"
+      ],
+      "title": "Barikot Swat.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Barikot_Swat.jpg",
+      "localOriginalPath": "assets/originals/places/barikot-swat-panorama.jpg",
+      "originalUrl": null,
+      "photographer": "Junaidglg",
+      "license": {
+        "name": "CC0 1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 1385,
+        "height": 640,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Barikot, Swat",
+        "status": "source-description-only",
+        "notes": [
+          "Named location follows the approved Commons file description; independent location confirmation is pending."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Panoramic view of Barikot in Swat Valley.",
+      "caption": "Barikot, a town in Swat Valley.",
+      "credit": "Photo: Junaidglg / Wikimedia Commons / CC0 1.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "butkara-1-stupa",
+      "roles": [
+        "through-time.archaeology"
+      ],
+      "title": "Butkara 1 Stupa Swat.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Butkara_1_Stupa_Swat.jpg",
+      "localOriginalPath": "assets/originals/through-time/butkara-1-stupa-swat.jpg",
+      "originalUrl": null,
+      "photographer": "Zainul Abideen",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 4288,
+        "height": 3216,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Butkara I, Swat",
+        "status": "source-description-only",
+        "notes": [
+          "Named location follows the approved Commons file description; independent location confirmation is pending."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Butkara I stupa archaeological site in Swat.",
+      "caption": "The Butkara I stupa site, Swat.",
+      "credit": "Photo: Zainul Abideen / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "swat-museum",
+      "roles": [
+        "through-time.museum-support"
+      ],
+      "title": "Swat Museum.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Swat_Museum.jpg",
+      "localOriginalPath": "assets/originals/through-time/swat-museum.jpg",
+      "originalUrl": null,
+      "photographer": "Adilswati",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 479,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Swat Museum",
+        "status": "source-description-only",
+        "notes": [
+          "Named location follows the approved Commons file description; independent location confirmation is pending."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Swat Museum building.",
+      "caption": "Swat Museum, photographed in 2017.",
+      "credit": "Photo: Adilswati / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "islampur-swat",
+      "roles": [
+        "living-swat.local-place-context"
+      ],
+      "title": "Islampur swat pakistan.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Islampur_swat_pakistan.jpg",
+      "localOriginalPath": "assets/originals/living-swat/islampur-swat.jpg",
+      "originalUrl": null,
+      "photographer": "Tabindaalkansjaffery",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 2592,
+        "height": 1944,
+        "verification": "previous-record"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Islampur village, Swat",
+        "status": "source-description-only",
+        "notes": [
+          "Named location follows the approved Commons file description; independent location confirmation is pending."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "derivatives": [],
+      "alt": "Islampur village in Swat, Pakistan.",
+      "caption": "Islampur village, Swat.",
+      "credit": "Photo: Tabindaalkansjaffery / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null,
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded"
+      },
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null,
+        "notes": "No contributor or portrait permissions are documented in this pack."
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "publicationApproved": false,
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "kalam-view",
+      "roles": [
+        "places.kalam"
+      ],
+      "title": "Kalam, Swat Valley.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kalam,_Swat_Valley.jpg",
+      "localOriginalPath": "assets/originals/places/kalam-view.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Kalam%2C_Swat_Valley.jpg",
+      "photographer": "Basharat Rasul",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 2448,
+        "height": 2448,
+        "verification": "source-page-recorded"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Kalam Valley (source identification)",
+        "status": "source-description-only",
+        "notes": [
+          "Not independently geolocated; final subject/crop review requires original pixels."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "publicationApproved": false,
+      "derivatives": [],
+      "alt": "Kalam Valley (source identification).",
+      "caption": "Kalam Valley (source identification).",
+      "credit": "Photo: Basharat Rasul / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null
+      },
+      "captureDateAsListed": "2017-04-30",
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "kalam-forest",
+      "roles": [
+        "home.forest-interlude"
+      ],
+      "title": "Kalam Valley (3).JPG",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kalam_Valley_(3).JPG",
+      "localOriginalPath": "assets/originals/places/kalam-forest.JPG",
+      "originalUrl": null,
+      "photographer": "Hajra06",
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 2464,
+        "height": 1632,
+        "verification": "source-page-recorded"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Deodar forest in Kalam (source identification)",
+        "status": "source-description-only",
+        "notes": [
+          "Not independently geolocated; final subject/crop review requires original pixels."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "publicationApproved": false,
+      "derivatives": [],
+      "alt": "Deodar forest in Kalam (source identification).",
+      "caption": "Deodar forest in Kalam (source identification).",
+      "credit": "Photo: Hajra06 / Wikimedia Commons / CC BY-SA 3.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null
+      },
+      "captureDateAsListed": "2014-06-23",
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    {
+      "id": "malam-jabba",
+      "roles": [
+        "places.malam-jabba"
+      ],
+      "title": "Malam Jabba SWAT.jpg",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Malam_Jabba_SWAT.jpg",
+      "localOriginalPath": "assets/originals/places/malam-jabba.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Malam_Jabba_SWAT.jpg",
+      "photographer": "Dr Naveed Ali Shah",
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification": "verified-live"
+      },
+      "dimensions": {
+        "width": 4160,
+        "height": 3120,
+        "verification": "source-page-recorded"
+      },
+      "sha256": null,
+      "downloadStatus": "failed",
+      "location": {
+        "claim": "Malam Jabba (source identification)",
+        "status": "source-description-only",
+        "notes": [
+          "Not independently geolocated; final subject/crop review requires original pixels."
+        ]
+      },
+      "rightsStatus": "license-verified",
+      "visualReviewStatus": "pending",
+      "publicationApproved": false,
+      "derivatives": [],
+      "alt": "Malam Jabba (source identification).",
+      "caption": "Malam Jabba (source identification).",
+      "credit": "Photo: Dr Naveed Ali Shah / Wikimedia Commons / CC BY-SA 4.0.",
+      "sourceCheck": {
+        "status": "verified-live",
+        "method": "Commons source-page text reviewed with connected web tool; no original downloaded",
+        "checkedOn": "2026-10-19",
+        "retrievedOn": null,
+        "metadataPath": null,
+        "sourceRevisionId": null,
+        "pageSnapshot": null,
+        "screenshot": null
+      },
+      "captureDateAsListed": "2014-04-06",
+      "personalPermissions": {
+        "status": "not-established",
+        "evidence": null
+      },
+      "processing": [],
+      "issues": [
+        "Original binary unavailable; pixel/crop/people review pending."
+      ],
+      "fetchError": {
+        "at": "2026-10-19T17:25:54.725476+00:00",
+        "message": "<urlopen error [Errno -2] Name or service not known>"
+      }
+    }
+  ],
+  "missingSlots": [
+    {
+      "id": "bahrain",
+      "role": "river.bahrain",
+      "status": "needs-authentic-source",
+      "reason": "No approved Bahrain photograph; do not substitute Kalam.",
+      "imageId": null
+    },
+    {
+      "id": "craft-weaving",
+      "role": "living-swat.craft",
+      "status": "needs-authentic-source",
+      "reason": "No authentic craft photograph with relevant rights/permissions.",
+      "imageId": null
+    },
+    {
+      "id": "contributor-portraits",
+      "role": "living-swat.people",
+      "status": "needs-authentic-source",
+      "reason": "No portraits with documented contributor permissions.",
+      "imageId": null
+    },
+    {
+      "id": "local-sound",
+      "role": "living-swat.sound",
+      "status": "needs-authentic-source",
+      "reason": "No contributor recordings, licence, transcript, or consent.",
+      "imageId": null
+    },
+    {
+      "id": "satellite-terrain",
+      "role": "fieldnotes.mapped-evidence",
+      "status": "needs-authentic-source",
+      "reason": "No dataset, dated scene, validated extent, resolution, CRS or processing record.",
+      "imageId": null
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "note": "No crop coordinates or typography safe areas are approved without viewing actual pixels and the packaged reference. These are content requirements, not completed crops.",
+  "formats": [
+    "avif",
+    "webp"
+  ],
+  "responsiveDisplayWidths": [
+    320,
+    390,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "densities": [
+    1,
+    2
+  ],
+  "defaultVariant": {
+    "fit": "inside",
+    "withoutEnlargement": true
+  },
+  "heroCrops": [
+    {
+      "id": "home-hero",
+      "assetId": "swat-river-kalam",
+      "status": "blocked-location-and-pixel-review",
+      "desktop": {
+        "rect": null,
+        "textSafeArea": null
+      },
+      "mobile": {
+        "rect": null,
+        "textSafeArea": null
+      },
+      "notes": "Resolve geolocation; inspect actual photo; set explicit source-pixel rectangles and normalized safe-area boxes for desktop/mobile before processing."
+    }
+  ]
+}

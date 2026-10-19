@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DevelopmentNotice from './DevelopmentNotice.astro';
+import { imageCredits } from '../lib/credits.ts';
+---
+
+<BaseLayout
+  title="Image credits"
+  description="Provenance records for the approved image source candidates, with publication status."
+>
+  <DevelopmentNotice />
+  <h1>Image source register and credits</h1>
+  <p>
+    These records retain the supplied attribution metadata. A listed source is
+    not a published photograph. Original files, rights, location and visual
+    review must pass the asset pipeline before use.
+  </p>
+  <ol class="credits-list">
+    {imageCredits.map((credit) => (
+      <li id={credit.id}>
+        <h2>{credit.title}</h2>
+        <p>
+          <a href={credit.sourceUrl}>Source file page</a> · {credit.creator} ·{' '}
+          <a href={credit.licenseUrl}>{credit.licenseName}</a>
+        </p>
+        <p class="status">
+          {credit.available
+            ? 'Asset publication checks passed'
+            : 'Unavailable for publication · review or original pending'}
+        </p>
+        <p>
+          Changes:{' '}
+          {credit.changes.length
+            ? credit.changes.join('; ')
+            : 'No processing recorded.'}
+        </p>
+        {credit.issues.length > 0 && (
+          <details>
+            <summary>Unresolved source issues</summary>
+            <ul>
+              {credit.issues.map((issue) => (
+                <li>{issue}</li>
+              ))}
+            </ul>
+          </details>
+        )}
+      </li>
+    ))}
+  </ol>
+</BaseLayout>

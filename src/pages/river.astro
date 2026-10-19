@@ -1,0 +1,7 @@
+---
+import NarrativePage from '../layouts/NarrativePage.astro';
+import { narratives } from '../data/narratives.ts';
+const narrative = narratives.find((item) => item.id === 'river')!;
+---
+
+<NarrativePage narrative={narrative} />

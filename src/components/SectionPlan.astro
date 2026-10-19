@@ -1,0 +1,48 @@
+---
+import type { NarrativeSection } from '../data/contracts.ts';
+import { places } from '../data/editorial.ts';
+interface Props {
+  section: NarrativeSection;
+  position: number;
+}
+const { section, position } = Astro.props;
+---
+
+<section
+  id={section.id}
+  aria-labelledby={`${section.id}-heading`}
+  data-section-kind={section.kind}
+>
+  <p class="section-position">
+    {position.toString().padStart(2, '0')} · Planned{' '}
+    {section.kind.replaceAll('-', ' ')}
+  </p>
+  <h2 id={`${section.id}-heading`}>{section.heading}</h2>
+  <p>{section.intent}</p>
+  <p class="status">Reference section: {section.referenceSection}</p>
+  {section.kind === 'place-treatments' && (
+    <ol class="place-treatments">
+      {places.map((place) => (
+        <li>
+          <h3>{place.name}</h3>
+          <p>{place.treatment}</p>
+          <p class="status">
+            Place essay unavailable · location precision unknown
+          </p>
+        </li>
+      ))}
+    </ol>
+  )}
+  <details>
+    <summary>Evidence needed before publication</summary>
+    <p>{section.requiredEvidence}</p>
+    <p>No publication-ready content or media is assigned to this section.</p>
+  </details>
+  {section.link && (
+    <p>
+      <a href={section.link.href}>
+        {section.link.label} <span aria-hidden="true">→</span>
+      </a>
+    </p>
+  )}
+</section>

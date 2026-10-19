@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "source": "reference/SWAT_CODEX_HANDOFF/docs/FIGMA_PAGE_MAP.json",
+  "referenceType": "reconstructed reference, not raw Figma export",
+  "pages": [
+    {
+      "referenceKey": "home",
+      "route": "/",
+      "desktopFigmaNode": "8:3",
+      "mobileFigmaNode": "12:2",
+      "sections": [
+        {
+          "id": "home-1",
+          "referenceSection": "Cinematic hero",
+          "proposedComponent": "LandscapeHero",
+          "candidateAssetIds": [
+            "swat-river-kalam"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Quarantine disputed location; type-only forest opening until a reviewed landscape is approved.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "home-2",
+          "referenceSection": "Editorial manifesto",
+          "proposedComponent": "EditorialManifesto",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Authored mission, interpretive; no documentary image required.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "home-3",
+          "referenceSection": "River exploration",
+          "proposedComponent": "RiverIndex",
+          "candidateAssetIds": [
+            "swat-river-kalam"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Typography/normal links until actual river dataset and original review.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "home-4",
+          "referenceSection": "Full-width landscape",
+          "proposedComponent": "LandscapeInterlude",
+          "candidateAssetIds": [
+            "kalam-forest"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Forest subject; replace Above the tree line. Exact crop/safe area awaits pixels.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "home-5",
+          "referenceSection": "Story mosaic",
+          "proposedComponent": "StoryMosaic",
+          "candidateAssetIds": [
+            "butkara-1-stupa",
+            "barikot-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Distinct Butkara monument and Barikot town contexts, no excavation substitute.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "home-6",
+          "referenceSection": "Living culture",
+          "proposedComponent": "CultureContext",
+          "candidateAssetIds": [
+            "islampur-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Village context only. Craft/portrait/audio require permission-cleared media.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "home-7",
+          "referenceSection": "Places",
+          "proposedComponent": "SelectedPlaces",
+          "candidateAssetIds": [
+            "kalam-view",
+            "mahodand-lake-primary",
+            "barikot-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Subject-specific alternatives; all images unavailable pending acquisition.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "home-8",
+          "referenceSection": "Footer",
+          "proposedComponent": "EditorialFooter",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Shared navigation and /sources.",
+          "cropApproval": "not-applicable"
+        }
+      ]
+    },
+    {
+      "referenceKey": "river",
+      "route": "/river/",
+      "desktopFigmaNode": "8:917",
+      "mobileFigmaNode": "12:136",
+      "sections": [
+        {
+          "id": "river-1",
+          "referenceSection": "Hero",
+          "proposedComponent": "SpatialIntro",
+          "candidateAssetIds": [
+            "swat-river-kalam"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Disputed river image cannot establish geography.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "river-2",
+          "referenceSection": "River index",
+          "proposedComponent": "RiverStops",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Real stops/anchors and verified geometry required; no decorative map evidence.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "river-3",
+          "referenceSection": "Bahrain focus",
+          "proposedComponent": "BahrainFeature",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "No Bahrain image. Do not use Kalam forest here; text-only treatment.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "river-4",
+          "referenceSection": "Parallel narratives",
+          "proposedComponent": "NarrativeBranches",
+          "candidateAssetIds": [
+            "butkara-1-stupa",
+            "islampur-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Cross-page context only with place-specific captions and actual media approval.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "river-5",
+          "referenceSection": "Field notes",
+          "proposedComponent": "SourceBridge",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Dated sources and uncertainty, not invented hydrology.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "river-6",
+          "referenceSection": "Footer",
+          "proposedComponent": "EditorialFooter",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Shared navigation and /sources.",
+          "cropApproval": "not-applicable"
+        }
+      ]
+    },
+    {
+      "referenceKey": "history",
+      "route": "/through-time/",
+      "desktopFigmaNode": "8:1214",
+      "mobileFigmaNode": "12:270",
+      "sections": [
+        {
+          "id": "history-1",
+          "referenceSection": "Editorial history hero",
+          "proposedComponent": "ArchaeologyIntro",
+          "candidateAssetIds": [
+            "butkara-1-stupa"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Name Butkara I and source its framing; no generic chronology.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "history-2",
+          "referenceSection": "Stratigraphy",
+          "proposedComponent": "StratigraphyContext",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Site-specific published layers; chronology scope differs between sources.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "history-3",
+          "referenceSection": "Heritage landscape",
+          "proposedComponent": "MonumentEssay",
+          "candidateAssetIds": [
+            "butkara-1-stupa"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Replace Barikot eyebrow with Butkara I. Preserve Barikot as separate sourced research.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "history-4",
+          "referenceSection": "Source-led archive",
+          "proposedComponent": "ProvenanceArchive",
+          "candidateAssetIds": [
+            "barikot-swat",
+            "butkara-1-stupa",
+            "swat-museum"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Town panorama, stupa and museum EXTERIOR; no photographed artifact claims.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "history-5",
+          "referenceSection": "Related places",
+          "proposedComponent": "RelatedDestinations",
+          "candidateAssetIds": [
+            "barikot-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Town context, not excavation evidence.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "history-6",
+          "referenceSection": "Footer",
+          "proposedComponent": "EditorialFooter",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Shared navigation and /sources.",
+          "cropApproval": "not-applicable"
+        }
+      ]
+    },
+    {
+      "referenceKey": "places",
+      "route": "/places/",
+      "desktopFigmaNode": "9:3",
+      "mobileFigmaNode": "12:404",
+      "sections": [
+        {
+          "id": "places-1",
+          "referenceSection": "Hero",
+          "proposedComponent": "PlacesOpening",
+          "candidateAssetIds": [
+            "kalam-view"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Square source needs pixel-tested desktop/mobile art direction.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "places-2",
+          "referenceSection": "Places index",
+          "proposedComponent": "AuthoredPlacesIndex",
+          "candidateAssetIds": [
+            "kalam-view",
+            "malam-jabba",
+            "mahodand-lake-primary",
+            "mahodand-lake-alternate",
+            "barikot-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Four distinct destination treatments; two Mahodand shots are one lake.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "places-3",
+          "referenceSection": "Geographic narrative",
+          "proposedComponent": "SpatialOrientation",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Use verified coordinates/geometry only; current dataset absent.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "places-4",
+          "referenceSection": "Landscape interlude",
+          "proposedComponent": "LandscapeInterlude",
+          "candidateAssetIds": [
+            "kalam-forest"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Forest in its own Kalam context; no unsupported elevation/treeline claim.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "places-5",
+          "referenceSection": "Practical guide",
+          "proposedComponent": "ResponsibleTravel",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Current weather/road/safety advice needs dated official review.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "places-6",
+          "referenceSection": "Footer",
+          "proposedComponent": "EditorialFooter",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Shared navigation and /sources.",
+          "cropApproval": "not-applicable"
+        }
+      ]
+    },
+    {
+      "referenceKey": "people",
+      "route": "/living-swat/",
+      "desktopFigmaNode": "9:148",
+      "mobileFigmaNode": "12:538",
+      "sections": [
+        {
+          "id": "people-1",
+          "referenceSection": "People hero",
+          "proposedComponent": "LivingContextIntro",
+          "candidateAssetIds": [
+            "islampur-swat"
+          ],
+          "copyClassification": "historical_source",
+          "note": "Islampur village context; no human identity/story inferred.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "people-2",
+          "referenceSection": "Languages",
+          "proposedComponent": "LanguageContext",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Source language claims to community authors; no invented voice quotes.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "people-3",
+          "referenceSection": "Crafts",
+          "proposedComponent": "CraftContext",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "MISSING_PERMISSION_CLEARED_ASSET. Text-only; no substitute patterns presented as tradition.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "people-4",
+          "referenceSection": "Oral history",
+          "proposedComponent": "OralHistoryContext",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "MISSING_PERMISSION_CLEARED_ASSET. No player without original licensed audio/transcript/consent.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "people-5",
+          "referenceSection": "Contributors",
+          "proposedComponent": "ContributorInvitation",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "No fake contributors or nonfunctional submission form; intake owner needed.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "people-6",
+          "referenceSection": "Footer",
+          "proposedComponent": "EditorialFooter",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Shared navigation and /sources.",
+          "cropApproval": "not-applicable"
+        }
+      ]
+    },
+    {
+      "referenceKey": "fieldnotes",
+      "route": "/fieldnotes/",
+      "desktopFigmaNode": "9:485",
+      "mobileFigmaNode": "12:672",
+      "sections": [
+        {
+          "id": "fieldnotes-1",
+          "referenceSection": "Landscape hero",
+          "proposedComponent": "EnvironmentIntro",
+          "candidateAssetIds": [
+            "swat-river-kalam"
+          ],
+          "copyClassification": "historical_source",
+          "note": "River photo quarantined; type-only observation question.",
+          "cropApproval": "pending-pixel-review"
+        },
+        {
+          "id": "fieldnotes-2",
+          "referenceSection": "Observations comparison",
+          "proposedComponent": "ObservationComparison",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "No earlier/later measurements until actual comparable licensed scenes exist.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "fieldnotes-3",
+          "referenceSection": "Map literacy",
+          "proposedComponent": "MapLiteracy",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Describe scale/season/resolution limits with real sources; no fake geometry.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "fieldnotes-4",
+          "referenceSection": "Sources and method",
+          "proposedComponent": "SourcesAndMethod",
+          "candidateAssetIds": [],
+          "copyClassification": "historical_source",
+          "note": "Separate observed, historical_source and interpretive; method/sources/publisher/date/limits.",
+          "cropApproval": "not-applicable"
+        },
+        {
+          "id": "fieldnotes-5",
+          "referenceSection": "Footer",
+          "proposedComponent": "EditorialFooter",
+          "candidateAssetIds": [],
+          "copyClassification": "interpretive",
+          "note": "Shared navigation and /sources.",
+          "cropApproval": "not-applicable"
+        }
+      ]
+    }
+  ]
+}

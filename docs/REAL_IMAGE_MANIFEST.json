@@ -1,0 +1,122 @@
+[
+  {
+    "file": "swat-river-kalam.jpg",
+    "title": "Swat River at Kalam Valley",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Swat_River_at_Kalam_Valley.jpg",
+    "author": "Moeedayazbutt",
+    "license": "CC BY-SA 3.0",
+    "recommended_usage": "Homepage and River primary image",
+    "editorial_caution": "Real Swat River at Kalam; avoid forced aerial/cinematic claims.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "kalam-view.jpg",
+    "title": "Kalam, Swat Valley",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kalam,_Swat_Valley.jpg",
+    "author": "Basharat Rasul",
+    "license": "VERIFY ON SOURCE",
+    "recommended_usage": "Kalam landscape and places tile",
+    "editorial_caution": "Verify actual photo composition and licensing prior to use.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "kalam-forest.jpg",
+    "title": "Kalam Valley (3).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kalam_Valley_(3).JPG",
+    "author": "Hajra06",
+    "license": "CC BY-SA 3.0",
+    "recommended_usage": "Forest interlude, river chapter",
+    "editorial_caution": "Real deodar cedar forest in Kalam.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "malam-jabba.jpg",
+    "title": "Malam Jabba SWAT.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Malam_Jabba_SWAT.jpg",
+    "author": "Dr Naveed Ali Shah",
+    "license": "CC BY-SA 4.0",
+    "recommended_usage": "Malam Jabba places tile",
+    "editorial_caution": "Real scene, no fabricated ski resort activity.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "mahodand-lake-main.jpg",
+    "title": "Mahodand Lake, Kalaam, Swat, KPK, Pakistan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mahodand_Lake,_Kalaam,_Swat,_KPK,_Pakistan.jpg",
+    "author": "Abeermajid1996",
+    "license": "CC BY-SA 4.0",
+    "recommended_usage": "Mahodand tile and lake detail",
+    "editorial_caution": "Real photographed lake; attribution and share alike conditions.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "mahodand-lake-secondary.jpg",
+    "title": "Mahodand Lake is an alpine glacial lake fed by melting glaciers.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mahodand_Lake_is_an_alpine_glacial_lake_fed_by_melting_glaciers.jpg",
+    "author": "VERIFY ON SOURCE",
+    "license": "VERIFY ON SOURCE",
+    "recommended_usage": "Secondary Mahodand detail only",
+    "editorial_caution": "Fetch source metadata before inclusion.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "barikot-panorama.jpg",
+    "title": "Barikot Swat.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Barikot_Swat.jpg",
+    "author": "Junaidglg",
+    "license": "CC0 1.0",
+    "recommended_usage": "Barikot context and places tile",
+    "editorial_caution": "Panoramic town view; NOT a photograph of excavation.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "butkara-stupa.jpg",
+    "title": "Butkara 1 Stupa Swat.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Butkara_1_Stupa_Swat.jpg",
+    "author": "Zainul Abideen",
+    "license": "CC BY-SA 4.0",
+    "recommended_usage": "Through Time and Buddhist heritage section",
+    "editorial_caution": "This is Butkara I, not Barikot; do not caption as Barikot excavations.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "swat-museum.jpg",
+    "title": "Swat Museum.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Swat_Museum.jpg",
+    "author": "Adilswati",
+    "license": "CC BY-SA 4.0",
+    "recommended_usage": "Museum archive section",
+    "editorial_caution": "The image shows museum building, not artifacts.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  },
+  {
+    "file": "islampur-village.jpg",
+    "title": "Islampur swat pakistan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Islampur_swat_pakistan.jpg",
+    "author": "Tabindaalkansjaffery",
+    "license": "CC BY-SA 4.0",
+    "recommended_usage": "Living Swat regional context",
+    "editorial_caution": "Village photograph, NOT evidence of weaving artisans.",
+    "bundled": false,
+    "status": "EXTERNAL_DOWNLOAD_REQUIRED",
+    "download_instructions": "Download original from source page; record exact license and original URL; encode an optimized WebP/AVIF derivative."
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "figma_url": "https://www.figma.com/design/YcTUvG9MEAZ2g2oQDsPfOe",
+  "figma_export_status": "DIRECT EXPORT BLOCKED BY STARTER PLAN TOOL LIMIT; preview is a reconstructed reference",
+  "pages": [
+    {
+      "slug": "home",
+      "desktop_figma": "8:3",
+      "mobile_figma": "12:2",
+      "desktop_height": 6790,
+      "sections": [
+        "Cinematic hero",
+        "Editorial manifesto",
+        "River exploration",
+        "Full-width landscape",
+        "Story mosaic",
+        "Living culture",
+        "Places",
+        "Footer"
+      ]
+    },
+    {
+      "slug": "river",
+      "desktop_figma": "8:917",
+      "mobile_figma": "12:136",
+      "desktop_height": 5080,
+      "sections": [
+        "Hero",
+        "River index",
+        "Bahrain focus",
+        "Parallel narratives",
+        "Field notes",
+        "Footer"
+      ]
+    },
+    {
+      "slug": "history",
+      "desktop_figma": "8:1214",
+      "mobile_figma": "12:270",
+      "desktop_height": 4990,
+      "sections": [
+        "Editorial history hero",
+        "Stratigraphy",
+        "Heritage landscape",
+        "Source-led archive",
+        "Related places",
+        "Footer"
+      ]
+    },
+    {
+      "slug": "places",
+      "desktop_figma": "9:3",
+      "mobile_figma": "12:404",
+      "desktop_height": 4880,
+      "sections": [
+        "Hero",
+        "Places index",
+        "Geographic narrative",
+        "Landscape interlude",
+        "Practical guide",
+        "Footer"
+      ]
+    },
+    {
+      "slug": "people",
+      "desktop_figma": "9:148",
+      "mobile_figma": "12:538",
+      "desktop_height": 4800,
+      "sections": [
+        "People hero",
+        "Languages",
+        "Crafts",
+        "Oral history",
+        "Contributors",
+        "Footer"
+      ]
+    },
+    {
+      "slug": "fieldnotes",
+      "desktop_figma": "9:485",
+      "mobile_figma": "12:672",
+      "desktop_height": 4310,
+      "sections": [
+        "Landscape hero",
+        "Observations comparison",
+        "Map literacy",
+        "Sources and method",
+        "Footer"
+      ]
+    }
+  ],
+  "tokens": {
+    "colors": {
+      "deep": "#0D211E",
+      "pine": "#153C33",
+      "paper": "#F1EBDD",
+      "paper_light": "#FFFDF5",
+      "stone": "#DCD4C4",
+      "clay": "#B68A6B",
+      "aqua": "#A8D1CB",
+      "ink": "#152A24"
+    },
+    "type": [
+      "Instrument Serif (including Italic)",
+      "Instrument Sans"
+    ],
+    "desktop_frame_width": 1440,
+    "mobile_frame_width": 390
+  }
+}

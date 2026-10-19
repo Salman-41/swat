@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "archive": "content/SWAT_CODEX_HANDOFF_FULL.zip",
+  "sha256": "3d21aa934fc4b4c143898d720a88ced8955aa919778c0fc2e26c380f67cc9e05",
+  "extractedAt": "reference/SWAT_CODEX_HANDOFF",
+  "type": "user-supplied reconstructed reference",
+  "inspected": [
+    "master prompt",
+    "README_FIRST",
+    "FIGMA_PAGE_MAP",
+    "REAL_IMAGE_MANIFEST",
+    "SOURCE_CREDIT_TEMPLATE",
+    "TECH_STACK_AND_MOTION",
+    "preview/index.html",
+    "preview/styles.css",
+    "preview/app.js",
+    "all six desktop screenshots",
+    "all six mobile screenshots"
+  ],
+  "notClaimed": [
+    "raw Figma export",
+    "real photos in archive",
+    "reference QA results as production verification"
+  ]
+}

@@ -1,0 +1,12 @@
+# PHASE A — MODEL: ASTRA PRO (or GPT-6.1 Sol when coding changes are needed)
+
+Read `START_HERE_MASTER_PROMPT.md` and the packaged reference first. Do NOT recreate the website design from scratch. Your job is to establish trustworthy assets and a scalable architecture.
+
+1. Audit all six page structures and content; extract design tokens from `docs/FIGMA_PAGE_MAP.json` and the visual reference. Produce a route/component plan that preserves distinct page rhythms.
+2. Work from `docs/REAL_IMAGE_MANIFEST.json`. Check each Commons file page; download *actual* original photos using source links, verify photographer, reuse license, rights and location; save originals under `assets/originals/` and optimized 1x/2x AVIF/WebP variants under `public/images/`. Include hero crops with safe areas for overlay typography. Keep a source registry with sha256, direct source URL, photographer, licence URL, original dimensions, crop/processing record, alt text, credit line, source-page screenshot metadata if helpful. Do not guess metadata. Mark unavailable assets honestly.
+3. Build a shot-to-section matrix for every page. Homepage hero should prioritize actual Swat River/Kalam photo if composition supports the copy. Diversity matters: Kalam forest, Malam Jabba, Mahodand Lake, Butkara, Barikot and museum, village context. **Butkara photographs are not Barikot excavation photos. Islampur village is not evidence of weaving activity.** Obtain culture portraits or craft photography with express permission if available; otherwise create an honest empty-state editorial treatment. Do not substitute images of a different country or region.
+4. Inspect factual copy and cross-check names, locations and sensitive historical claims. Use official and authoritative sources wherever possible. A photograph alone is not proof of chronology.
+5. Set up Astro project, TypeScript, lint/format, Playwright, image processing scripts, assets manifest, SEO meta foundations, credits page and README. Check Astro/React integration and deployment viability; use only dependencies that serve a clear purpose. Add no needlessly heavy UI kit.
+6. Build data structures for places, articles, image credits, geography, mapped evidence, and narratives. Preserve schema distinction: `observed`, `historical_source`, `interpretive`.
+
+DELIVER: verified asset registry, real downloaded licensed images (or transparent missing-asset states), working repo scaffold and CLI scripts, plus a precise next-phase checklist. Produce source code and files, not only a report.

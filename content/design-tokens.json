@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "source": "docs/FIGMA_PAGE_MAP.json",
+  "canonicalDecision": "Declared page-map colors and requested Instrument families; preview CSS differences documented in PHASE_A_AUDIT.md.",
+  "tokens": {
+    "colors": {
+      "deep": "#0D211E",
+      "pine": "#153C33",
+      "paper": "#F1EBDD",
+      "paper_light": "#FFFDF5",
+      "stone": "#DCD4C4",
+      "clay": "#B68A6B",
+      "aqua": "#A8D1CB",
+      "ink": "#152A24"
+    },
+    "type": [
+      "Instrument Serif (including Italic)",
+      "Instrument Sans"
+    ],
+    "desktop_frame_width": 1440,
+    "mobile_frame_width": 390
+  },
+  "referenceGeometry": {
+    "source": "reference/SWAT_CODEX_HANDOFF/preview/styles.css",
+    "desktopGutter": "clamp(22px,4.6vw,74px)",
+    "mobileGutter": 23,
+    "mobileBreakpoint": 760,
+    "desktopSectionPadding": 105,
+    "mobileSectionPadding": 80,
+    "desktopHeader": 91,
+    "mobileHeader": 77,
+    "storyMosaicColumns": "1.55fr 1fr",
+    "cultureColumns": "1.3fr .87fr",
+    "riverColumns": "48% 52%",
+    "gaps": [
+      22,
+      23,
+      25,
+      26
+    ]
+  }
+}

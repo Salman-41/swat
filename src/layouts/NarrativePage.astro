@@ -1,0 +1,33 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import DevelopmentNotice from '../components/DevelopmentNotice.astro';
+import SectionPlan from '../components/SectionPlan.astro';
+import type { Narrative } from '../data/contracts.ts';
+interface Props {
+  narrative: Narrative;
+}
+const { narrative } = Astro.props;
+---
+
+<BaseLayout title={narrative.title} description={narrative.description}>
+  <DevelopmentNotice />
+  <div class="page-intro">
+    <p class="status">Narrative architecture · {narrative.id}</p>
+    <h1>{narrative.title}</h1>
+    <p>{narrative.description}</p>
+  </div>
+  <nav class="sequence" aria-label={`${narrative.title} planned sequence`}>
+    <ol>
+      {narrative.sections.map((section) => (
+        <li>
+          <a href={`#${section.id}`}>{section.heading}</a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <div class="narrative-sequence" data-narrative={narrative.id}>
+    {narrative.sections.map((section, index) => (
+      <SectionPlan section={section} position={index + 1} />
+    ))}
+  </div>
+</BaseLayout>
