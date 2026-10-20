@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T17:25:54.725476+00:00",
+  "updatedAt": "2026-10-20T04:05:52.698989+00:00",
   "scope": "Ten Commons file pages approved in the user-supplied handoff. Source-page assertions are distinct from decoded originals, geolocation, crop review and permission records.",
   "evidenceNotes": "Source metadata rechecked by Astra using connected web tools; local binary and processing fields remain null/empty until acquisition succeeds. Raw file-page/API snapshots are not claimed.",
   "assets": [
@@ -63,8 +63,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -123,8 +123,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -183,8 +183,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -243,8 +243,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -303,8 +303,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -363,8 +363,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -423,8 +423,8 @@
       ],
       "publicationApproved": false,
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -483,8 +483,8 @@
         "Original binary unavailable; pixel/crop/people review pending."
       ],
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -543,8 +543,8 @@
         "Original binary unavailable; pixel/crop/people review pending."
       ],
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T04:05:52.698989+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     },
     {
@@ -603,8 +603,8 @@
         "Original binary unavailable; pixel/crop/people review pending."
       ],
       "fetchError": {
-        "at": "2026-10-19T17:25:54.725476+00:00",
-        "message": "<urlopen error [Errno -2] Name or service not known>"
+        "at": "2026-10-20T03:47:54.522504+00:00",
+        "message": "<urlopen error [Errno -3] Temporary failure in name resolution>"
       }
     }
   ],

@@ -43,12 +43,22 @@ export function canPublishAsset(asset: SourceAsset): boolean {
   return (
     asset.publicationApproved === true &&
     asset.downloadStatus === 'downloaded' &&
-    !!asset.sha256 &&
+    /^[a-f0-9]{64}$/.test(asset.sha256 ?? '') &&
+    !!asset.originalUrl &&
     asset.rightsStatus === 'license-verified' &&
     asset.license.verification === 'verified-live' &&
     asset.dimensions.verification === 'verified-original' &&
     asset.location.status === 'confirmed' &&
     asset.visualReviewStatus === 'reviewed' &&
-    asset.derivatives.length > 0
+    !!asset.alt.trim() &&
+    !!asset.sourceCheck.metadataPath &&
+    !!asset.sourceCheck.pageSnapshot &&
+    asset.derivatives.length > 0 &&
+    asset.derivatives.every(
+      (item) =>
+        item.processing.sourceSha256 === asset.sha256 &&
+        item.processing.upscaled === false &&
+        item.width <= (item.processing.rect?.width ?? asset.dimensions.width),
+    )
   );
 }

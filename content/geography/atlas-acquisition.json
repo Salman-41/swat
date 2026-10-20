@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "status": "awaiting-verified-data",
+  "coordinateOrder": "longitude, latitude",
+  "targetCRS": "OGC:CRS84",
+  "river": {
+    "name": "Swat River",
+    "geometry": null,
+    "datasetUrl": null,
+    "sourceRevision": null,
+    "acquiredOn": null,
+    "license": null,
+    "sha256": null,
+    "processing": []
+  },
+  "stops": [
+    {
+      "id": "kalam",
+      "name": "Kalam",
+      "coordinates": null,
+      "sourceIds": [],
+      "accuracyMeters": null
+    },
+    {
+      "id": "bahrain",
+      "name": "Bahrain",
+      "coordinates": null,
+      "sourceIds": [],
+      "accuracyMeters": null
+    },
+    {
+      "id": "madyan",
+      "name": "Madyan",
+      "coordinates": null,
+      "sourceIds": [],
+      "accuracyMeters": null
+    },
+    {
+      "id": "mingora",
+      "name": "Mingora",
+      "coordinates": null,
+      "sourceIds": [],
+      "accuracyMeters": null
+    },
+    {
+      "id": "barikot",
+      "name": "Barikot",
+      "coordinates": null,
+      "sourceIds": [],
+      "accuracyMeters": null
+    }
+  ],
+  "tiles": {
+    "provider": null,
+    "styleUrl": null,
+    "termsUrl": null,
+    "attribution": null
+  },
+  "review": {
+    "geometryContinuity": "pending",
+    "settlementCrossCheck": "pending",
+    "coordinateOrderAndCRS": "pending",
+    "licenseAndAttribution": "pending"
+  },
+  "notes": [
+    "These are narrative stops from the reference, not surveyed points or an assertion of riverbank position.",
+    "Never interpolate a river line between these settlements or trace reference_art/river.svg as measured geometry.",
+    "Preserve dataset IDs, revision/date, unmodified input, processing record and checksum before producing GeoJSON.",
+    "Keep an accessible textual place index when mapping is unavailable or WebGL is disabled."
+  ]
+}

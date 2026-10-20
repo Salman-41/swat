@@ -69,6 +69,7 @@ export interface SourceAsset {
   title: string;
   sourcePageUrl: string;
   localOriginalPath: string;
+  originalUrl: string | null;
   photographer: string;
   license: {
     name: string;
@@ -78,7 +79,8 @@ export interface SourceAsset {
   dimensions: {
     width: number;
     height: number;
-    verification: 'previous-record' | 'verified-original';
+    verification:
+      'previous-record' | 'source-page-recorded' | 'verified-original';
   };
   sha256: string | null;
   downloadStatus: 'missing' | 'downloaded' | 'failed';
@@ -92,16 +94,48 @@ export interface SourceAsset {
   visualReviewStatus: 'pending' | 'reviewed';
   derivatives: {
     path: string;
+    url: string;
     width: number;
     height: number;
-    format: string;
+    format: 'avif' | 'webp';
     sha256: string;
-    processing: string[];
+    bytes: number;
+    uses: { displayWidth: number; density: number }[];
+    processing: {
+      recipeId: string;
+      rect: { left: number; top: number; width: number; height: number } | null;
+      textSafeArea: {
+        x: number;
+        y: number;
+        width: number;
+        height: number;
+      } | null;
+      colourspace: string;
+      upscaled: false;
+      sourceSha256: string;
+    };
   }[];
   alt: string;
   caption: string;
   credit: string;
-  processing: string[];
+  processing: {
+    at: string;
+    tool: string;
+    versions: Record<string, string>;
+    operations: string[];
+    originalModified: boolean;
+    recipes: string[];
+  }[];
+  sourceCheck: {
+    status: 'verified-live' | 'pending';
+    checkedOn: string | null;
+    retrievedOn: string | null;
+    metadataPath: string | null;
+    sourceRevisionId: number | null;
+    pageSnapshot: { type: 'html'; path: string; sha256: string } | null;
+    screenshot: string | null;
+    method?: string;
+  };
   issues: string[];
 }
 export interface ImageCredit {

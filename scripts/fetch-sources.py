@@ -37,7 +37,7 @@ def fetch(url, allowed_hosts, max_bytes=40_000_000):
     if urllib.parse.urlsplit(url).hostname not in allowed_hosts:
         raise ValueError('Unexpected source host')
     with urllib.request.urlopen(urllib.request.Request(url, headers=HEADERS), timeout=20) as response:
-        if urllib.parse.urlsplit(response.url).hostname not in allowed_hosts:
+        if urllib.parse.urlsplit(response.url).scheme != 'https' or urllib.parse.urlsplit(response.url).hostname not in allowed_hosts:
             raise ValueError('Unexpected redirect host')
         body = response.read(max_bytes + 1)
         if len(body) > max_bytes:
@@ -86,8 +86,18 @@ def acquire(asset):
     # Restrict automatic acquisition to the reuse licences approved for this project.
     if licence not in {'CC BY-SA 3.0', 'CC BY-SA 4.0', 'CC0', 'CC0 1.0'}:
         raise ValueError('Licence needs manual review: ' + licence)
-    if 'creativecommons.org/' not in licence_url:
+    licence_parts = urllib.parse.urlsplit(licence_url)
+    allowed_licences = {
+        'CC BY-SA 3.0': '/licenses/by-sa/3.0/',
+        'CC BY-SA 4.0': '/licenses/by-sa/4.0/',
+        'CC0': '/publicdomain/zero/1.0/',
+        'CC0 1.0': '/publicdomain/zero/1.0/',
+    }
+    if (licence_parts.hostname != 'creativecommons.org'
+            or licence_parts.scheme not in {'http', 'https'}
+            or licence_parts.path.rstrip('/') + '/' != allowed_licences[licence]):
         raise ValueError('Licence URL needs manual review')
+    licence_url = 'https://creativecommons.org' + allowed_licences[licence]
     snapshot = fetch(asset['sourcePageUrl'], {'commons.wikimedia.org'})
     original = fetch(info['url'], {'upload.wikimedia.org'})
     if not original.startswith(b'\xff\xd8\xff'):
@@ -96,7 +106,13 @@ def acquire(asset):
         raise ValueError('Original byte count does not match Commons metadata')
     sha1 = hashlib.sha1(original).hexdigest()
     reported = info.get('sha1', '')
-    if re.fullmatch(r'[0-9a-f]{40}', reported) and sha1 != reported:
+    if re.fullmatch(r'[0-9a-f]{40}', reported):
+        expected_sha1 = reported
+    elif re.fullmatch(r'[0-9a-z]{1,31}', reported):
+        expected_sha1 = format(int(reported, 36), '040x')
+    else:
+        raise ValueError('Missing or invalid original checksum in Commons metadata')
+    if sha1 != expected_sha1:
         raise ValueError('Commons SHA1 mismatch')
     original_path = local_path(asset['localOriginalPath'])
     if not original_path.is_relative_to(ROOT / 'assets/originals'):
@@ -112,6 +128,7 @@ def acquire(asset):
         'license': {'name': licence, 'url': licence_url, 'verification': 'verified-live'},
         'dimensions': {'width': info['width'], 'height': info['height'], 'verification': 'verified-original'},
         'sha256': digest, 'downloadStatus': 'downloaded', 'rightsStatus': 'license-verified',
+        'credit': f'Photo: {creator} / Wikimedia Commons / {licence}.',
         'sourceCheck': {
             'status': 'verified-live', 'checkedOn': NOW[:10], 'retrievedOn': NOW,
             'metadataPath': str((folder / 'commons-imageinfo.json').relative_to(ROOT)),

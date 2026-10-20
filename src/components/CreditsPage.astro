@@ -1,7 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DevelopmentNotice from './DevelopmentNotice.astro';
-import { imageCredits } from '../lib/credits.ts';
+import { imageCredits, sourceRegistry } from '../lib/credits.ts';
+import SourcePhoto from './SourcePhoto.astro';
+import factualSources from '../../content/factual-sources.json';
+const available = imageCredits.filter((credit) => credit.available).length;
+const conflicts = sourceRegistry.assets.filter(
+  (asset) => asset.location.status === 'location-conflict',
+).length;
 ---
 
 <BaseLayout
@@ -9,42 +15,115 @@ import { imageCredits } from '../lib/credits.ts';
   description="Provenance records for the approved image source candidates, with publication status."
 >
   <DevelopmentNotice />
-  <h1>Image source register and credits</h1>
+  <div class="source-overview">
+    <p class="status">Sources & credits · Editorial record</p>
+    <h1>
+      Nothing without
+      <br />a source.
+    </h1>
+    <p>
+      Photographs, places and claims have different kinds of evidence. This
+      register makes their origins and limitations visible.
+    </p>
+    <div class="source-stats" aria-label="Asset verification status">
+      <p>
+        <strong>{available}</strong> photographs ready
+      </p>
+      <p>
+        <strong>{imageCredits.length - available}</strong> awaiting verification
+      </p>
+      <p>
+        <strong>{conflicts}</strong> location conflict
+      </p>
+    </div>
+    <nav class="source-index" aria-label="Sources sections">
+      <a href="#photographs">Photographs</a> ·{' '}
+      <a href="#missing-media">Missing media</a> ·{' '}
+      <a href="#research">Research & method</a>
+    </nav>
+  </div>
+  <h2 id="photographs">Image source register and credits</h2>
   <p>
-    These records retain the supplied attribution metadata. A listed source is
-    not a published photograph. Original files, rights, location and visual
-    review must pass the asset pipeline before use.
+    These are candidate sources. The visible status records whether the
+    original, licensing, place and visual review have passed. Missing
+    photographs are left empty.
   </p>
   <ol class="credits-list">
     {imageCredits.map((credit) => (
       <li id={credit.id}>
-        <h2>{credit.title}</h2>
-        <p>
-          <a href={credit.sourceUrl}>Source file page</a> · {credit.creator} ·{' '}
-          <a href={credit.licenseUrl}>{credit.licenseName}</a>
-        </p>
-        <p class="status">
-          {credit.available
-            ? 'Asset publication checks passed'
-            : 'Unavailable for publication · review or original pending'}
-        </p>
-        <p>
-          Changes:{' '}
-          {credit.changes.length
-            ? credit.changes.join('; ')
-            : 'No processing recorded.'}
-        </p>
-        {credit.issues.length > 0 && (
-          <details>
-            <summary>Unresolved source issues</summary>
-            <ul>
-              {credit.issues.map((issue) => (
-                <li>{issue}</li>
-              ))}
-            </ul>
-          </details>
-        )}
+        <div class="source-record">
+          <div>
+            <SourcePhoto
+              assetId={credit.id}
+              sizes="(max-width: 640px) 100vw, 480px"
+            />
+          </div>
+          <div>
+            <h3>{credit.title}</h3>
+            <p>
+              <a href={credit.sourceUrl}>Source file page</a> · {credit.creator}{' '}
+              · <a href={credit.licenseUrl}>{credit.licenseName}</a>
+            </p>
+            <p class="status">
+              {credit.available
+                ? 'Asset publication checks passed'
+                : 'Unavailable for publication · review or original pending'}
+            </p>
+            <p>
+              Changes:{' '}
+              {credit.changes.length
+                ? credit.changes.join('; ')
+                : 'No processing recorded.'}
+            </p>
+            {credit.issues.length > 0 && (
+              <details>
+                <summary>Unresolved source issues</summary>
+                <ul>
+                  {credit.issues.map((issue) => (
+                    <li>{issue}</li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </div>
+        </div>
       </li>
     ))}
   </ol>
+  <section
+    class="source-constraints"
+    id="missing-media"
+    aria-labelledby="missing-heading"
+  >
+    <h2 id="missing-heading">What is still missing</h2>
+    <ul>
+      {sourceRegistry.missingSlots.map((slot) => (
+        <li>{slot.reason}</li>
+      ))}
+    </ul>
+    <p>
+      A village view cannot document weaving. A town panorama cannot document an
+      excavation. Audio and portraits require contributor permission.
+    </p>
+  </section>
+  <section id="research" aria-labelledby="research-heading">
+    <h2 id="research-heading">Research & method</h2>
+    <p>
+      These references guide editorial checks and future data acquisition. No
+      satellite scenes or measured river geometry have been acquired.
+    </p>
+    <ul>
+      {factualSources.sources.map((source) => (
+        <li>
+          <p>
+            <a href={source.url}>{source.title}</a> — {source.publisher}
+            <br />
+            {source.scope}
+            <br />
+            <small>{source.limitation}</small>
+          </p>
+        </li>
+      ))}
+    </ul>
+  </section>
 </BaseLayout>

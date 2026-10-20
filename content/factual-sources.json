@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-20",
+  "method": "Primary source text inspected through connected web access. No local dataset or source-page binary is implied by this record.",
+  "sources": [
+    {
+      "id": "pmd-kalam-wind",
+      "title": "Kalam wind resource technical report, 02/2008",
+      "publisher": "Pakistan Meteorological Department",
+      "url": "https://www.pmd.gov.pk/wind/KP/Kalam.pdf",
+      "scope": "Historical monitoring-site context for the river photograph location discrepancy.",
+      "limitation": "A wind-monitoring location is not a settlement centroid or river geometry. Do not copy these coordinates into the atlas."
+    },
+    {
+      "id": "cafoscari-swat-mission",
+      "title": "Ca’ Foscari and the Italian archaeological mission in Swat",
+      "publisher": "Ca’ Foscari University of Venice",
+      "url": "https://www.unive.it/pag/14024/?tx_news_pi1%5Bnews%5D=9379",
+      "scope": "Institutional context for archaeology at Barikot, other Swat sites and the museum.",
+      "limitation": "Overview only. Exact occupational layers and dates require the relevant excavation publication and page locator. Article photographs are not cleared for reuse here."
+    },
+    {
+      "id": "copernicus-sentinel-2",
+      "title": "Copernicus Sentinel-2 mission collection",
+      "publisher": "Copernicus Data Space Ecosystem",
+      "url": "https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2",
+      "scope": "Candidate observation programme for future environmental evidence.",
+      "limitation": "No Swat scenes selected or downloaded. A mission description cannot establish local change or support a before-and-after slider."
+    },
+    {
+      "id": "osm-reuse",
+      "title": "OpenStreetMap copyright and licence",
+      "publisher": "OpenStreetMap Foundation",
+      "url": "https://www.openstreetmap.org/copyright",
+      "scope": "Attribution and ODbL terms for a candidate river and settlement dataset.",
+      "limitation": "No OSM geometry is included yet. Data rights do not grant unrestricted use of a tile service; a production tile provider must be selected separately."
+    }
+  ]
+}

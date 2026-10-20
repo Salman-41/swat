@@ -1,0 +1,78 @@
+---
+import { sourceAssets } from '../lib/credits.ts';
+import { photoSources } from '../lib/photos.ts';
+import { hasVerifiedAssetFiles } from '../lib/asset-files.ts';
+
+interface Props {
+  assetId: string;
+  sizes: string;
+  recipeId?: string;
+  priority?: boolean;
+  unavailableText?: string;
+}
+const {
+  assetId,
+  sizes,
+  recipeId = 'uncropped',
+  priority = false,
+  unavailableText = 'A photograph belongs here when its source, place and original file can be verified.',
+} = Astro.props;
+const asset = sourceAssets.find((item) => item.id === assetId);
+if (!asset) throw new Error(`Unknown photograph: ${assetId}`);
+const sources = hasVerifiedAssetFiles(asset, process.cwd())
+  ? photoSources(asset, recipeId)
+  : null;
+---
+
+<figure class="source-photo" data-asset-id={assetId} data-available={!!sources}>
+  {sources ? (
+    <>
+      <picture>
+        <source type="image/avif" srcset={sources.avif} sizes={sizes} />
+        <source type="image/webp" srcset={sources.webp} sizes={sizes} />
+        <img
+          src={sources.fallback.url}
+          width={sources.fallback.width}
+          height={sources.fallback.height}
+          alt={asset.alt}
+          sizes={sizes}
+          srcset={sources.webp}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchpriority={priority ? 'high' : 'auto'}
+          decoding="async"
+        />
+      </picture>
+      <figcaption>
+        {asset.caption} <a href={`/sources/#${asset.id}`}>{asset.credit}</a>
+      </figcaption>
+    </>
+  ) : (
+    <div class="media-unavailable">
+      <p class="status">Photography awaiting verification</p>
+      <p>{unavailableText}</p>
+      <a href={`/sources/#${asset.id}`}>Read the source record →</a>
+    </div>
+  )}
+</figure>
+
+<style>
+  figure {
+    margin: 0;
+  }
+  picture,
+  img {
+    display: block;
+    width: 100%;
+  }
+  img {
+    height: auto;
+  }
+  figcaption {
+    padding-block: 0.8rem;
+    font-size: 0.8rem;
+  }
+  .media-unavailable {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: var(--swat-stone, #dcd4c4);
+  }
+</style>

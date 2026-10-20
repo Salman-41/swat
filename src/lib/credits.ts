@@ -1,10 +1,13 @@
 import registry from '../../content/source-registry.json';
-import type { ImageCredit, SourceAsset } from '../data/contracts.ts';
+import type { ImageCredit } from '../data/contracts.ts';
 import { hasVerifiedAssetFiles } from './asset-files.ts';
 import { canPublishAsset } from './evidence.ts';
+import { processingChanges } from './photos.ts';
+import { sourceRegistrySchema } from './registry.ts';
 
-// The asset pipeline validates registry JSON. This typed adapter keeps publication guards at the build boundary.
-export const sourceAssets: SourceAsset[] = registry.assets as SourceAsset[];
+// Invalid provenance fails the build instead of being hidden by a TypeScript cast.
+export const sourceRegistry = sourceRegistrySchema.parse(registry);
+export const sourceAssets = sourceRegistry.assets;
 export const imageCredits: ImageCredit[] = sourceAssets.map((asset) => ({
   id: asset.id,
   title: asset.title,
@@ -12,7 +15,7 @@ export const imageCredits: ImageCredit[] = sourceAssets.map((asset) => ({
   sourceUrl: asset.sourcePageUrl,
   licenseName: asset.license.name,
   licenseUrl: asset.license.url,
-  changes: asset.processing,
+  changes: processingChanges(asset),
   available:
     canPublishAsset(asset) && hasVerifiedAssetFiles(asset, process.cwd()),
   issues: asset.issues,

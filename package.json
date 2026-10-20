@@ -15,18 +15,20 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "node --experimental-strip-types --test tests/contracts.test.ts",
+    "test": "node --experimental-strip-types --experimental-test-isolation=none --test tests/*.test.ts",
     "test:e2e": "playwright test",
     "assets:fetch": "python3 scripts/fetch-sources.py",
     "assets:process": "node scripts/process-images.mjs",
     "assets:audit": "node scripts/audit-assets.mjs",
-    "assets:matrix": "node scripts/build-shot-matrix.mjs"
+    "assets:matrix": "node scripts/build-shot-matrix.mjs",
+    "handoff:verify": "python3 scripts/verify-handoff.py"
   },
   "dependencies": {
     "@fontsource/instrument-sans": "^5.3.0",
     "@fontsource/instrument-serif": "^5.3.0",
     "astro": "^7.4.1",
-    "sharp": "^0.35.5"
+    "sharp": "^0.35.5",
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.11",

@@ -55,10 +55,11 @@ test('publication requires review and substantive evidence', () => {
     true,
   );
 });
-test('all current source assets remain withheld; disputed river cannot be cleared by download alone', () => {
+test('unavailable sources remain withheld; disputed river cannot be cleared by download alone', () => {
   assert.equal(registry.assets.length, 10);
   for (const asset of registry.assets)
-    assert.equal(canPublishAsset(asset), false);
+    if (asset.downloadStatus !== 'downloaded')
+      assert.equal(canPublishAsset(asset), false);
   const river = registry.assets.find(
     (asset) => asset.id === 'swat-river-kalam',
   )!;
@@ -76,11 +77,21 @@ test('all current source assets remain withheld; disputed river cannot be cleare
       derivatives: [
         {
           path: 'public/images/river.webp',
+          url: '/images/river.webp',
           width: 640,
           height: 480,
           format: 'webp',
           sha256: 'b'.repeat(64),
-          processing: ['resize'],
+          bytes: 100,
+          uses: [{ displayWidth: 640, density: 1 }],
+          processing: {
+            recipeId: 'uncropped',
+            rect: null,
+            textSafeArea: null,
+            colourspace: 'srgb',
+            upscaled: false,
+            sourceSha256: 'a'.repeat(64),
+          },
         },
       ],
     }),

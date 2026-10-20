@@ -1,9 +1,8 @@
-/* Neutral development presentation. Reference tokens are recorded separately in reference-tokens.css;
-   this scaffold intentionally defers final page composition to Phase B. */
+/* Phase A editorial proof. Full page compositions remain the next implementation stage. */
 :root {
-  font-family: system-ui, sans-serif;
-  color: #181818;
-  background: #fff;
+  font-family: var(--swat-font-sans);
+  color: var(--swat-ink);
+  background: var(--swat-paper);
   line-height: 1.6;
 }
 * {
@@ -23,7 +22,15 @@ header {
   border-bottom: 1px solid #ccc;
 }
 .brand {
-  font-weight: 700;
+  font: 400 2.5rem/1 var(--swat-font-serif);
+  text-decoration: none;
+}
+.brand-note {
+  display: inline-block;
+  margin-left: 0.8rem;
+  font: 400 0.7rem/1.5 var(--swat-font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 nav ul {
   display: flex;
@@ -57,18 +64,19 @@ a[aria-current='page'] {
   transform: translateY(0);
 }
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.15;
+  font: 400 clamp(3.5rem, 8vw, 7rem)/0.98 var(--swat-font-serif);
+  letter-spacing: -0.035em;
+  max-width: 18ch;
 }
 h2 {
-  font-size: 1.5rem;
+  font: 400 2.1rem/1.1 var(--swat-font-serif);
   line-height: 1.3;
 }
 p {
   max-width: 72ch;
 }
 .development-notice {
-  border: 1px solid #888;
+  border: 1px solid #a8b0a4;
   padding: 1rem;
 }
 .development-notice p {
@@ -110,17 +118,69 @@ summary {
   padding-block: 0.5rem;
 }
 .credits-list {
-  padding-left: 1.5rem;
+  padding: 0;
+  list-style: none;
 }
 .credits-list > li {
-  padding-block: 1.5rem;
+  padding-block: 3rem;
   border-bottom: 1px solid #ccc;
+}
+.source-record {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3rem;
+}
+.source-record h2 {
+  overflow-wrap: anywhere;
+  margin-top: 0;
+}
+.source-record h3 {
+  overflow-wrap: anywhere;
+  margin-top: 0;
+  font: 400 2.1rem/1.1 var(--swat-font-serif);
+}
+.source-overview {
+  padding-block: 1rem 3rem;
+}
+.source-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  padding-block: 1rem;
+  border-block: 1px solid #a8b0a4;
+}
+.source-stats p {
+  margin: 0;
+}
+.source-stats strong {
+  font: 400 2.8rem var(--swat-font-serif);
+  padding-right: 0.5rem;
+}
+.source-index {
+  margin-block: 2rem;
+}
+.source-constraints {
+  padding: 2rem;
+  background: var(--swat-stone);
+}
+.source-constraints h2 {
+  margin-top: 0;
+}
+.source-constraints li {
+  padding-block: 0.5rem;
 }
 footer {
   margin-top: 2rem;
   border-top: 1px solid #ccc;
 }
 @media (max-width: 40rem) {
+  .source-record {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .source-constraints {
+    padding: 1.25rem;
+  }
   header,
   main,
   footer {

@@ -26,8 +26,36 @@ export function hasVerifiedAssetFiles(
       return false;
     }
   };
+  if (!asset.sourceCheck.metadataPath) return false;
+  const metadataPath = resolve(root, asset.sourceCheck.metadataPath);
+  if (!metadataPath.startsWith(resolve(root, 'assets/provenance') + sep))
+    return false;
+  try {
+    const metadata = JSON.parse(readFileSync(metadataPath, 'utf8'));
+    const pages = Object.values(metadata.query?.pages ?? {}) as {
+      imageinfo?: { url: string; width: number; height: number }[];
+    }[];
+    const info = pages[0]?.imageinfo?.[0];
+    if (
+      pages.length !== 1 ||
+      !info ||
+      info.url !== asset.originalUrl ||
+      info.width !== asset.dimensions.width ||
+      info.height !== asset.dimensions.height
+    )
+      return false;
+  } catch {
+    return false;
+  }
   return (
     matches(asset.localOriginalPath, asset.sha256, 'assets/originals') &&
+    !!asset.sourceCheck.metadataPath &&
+    !!asset.sourceCheck.pageSnapshot &&
+    matches(
+      asset.sourceCheck.pageSnapshot.path,
+      asset.sourceCheck.pageSnapshot.sha256,
+      'assets/provenance',
+    ) &&
     asset.derivatives.length > 0 &&
     asset.derivatives.every(
       (derivative) =>

@@ -4,6 +4,8 @@ An Astro and TypeScript foundation for six distinct editorial narratives. This i
 
 The source is the reconstructed handoff in `reference/SWAT_CODEX_HANDOFF/`: its master prompt, page map, image manifest, preview code, and all six desktop and six mobile screenshots were reviewed. It is not a raw Figma export. The original seven-source `content/image-manifest.json` and `docs/image-assets.md` remain unchanged.
 
+The 20 October checkpoint adds a validated source registry, responsive photograph component, readable processing credits, six-width browser coverage and a source register styled with the supplied Instrument typography and palette. Read [the asset audit](docs/PHASE_A_AUDIT.md), [architecture](docs/ARCHITECTURE.md), [section/shot matrix](docs/SHOT_TO_SECTION_MATRIX.md) and [verification record](docs/PHASE_A_QA.md). All 39 extracted files match the ZIP. All ten original downloads still fail DNS resolution; **no photographs, measured river geometry or satellite comparisons are included**. The handoff permits explicit missing-asset states for this stage.
+
 ## Run locally
 
 Use **Node 24** (the `.nvmrc` and `.node-version` select it), or Node ≥22.22, and npm ≥9.6.5. The system Node 20 in the task environment is too old. No global packages are required.
@@ -23,9 +25,10 @@ npm test
 npm run build
 npx playwright install chromium
 npm run test:e2e
+npm run handoff:verify
 ```
 
-`test:e2e` starts a local preview of **the built `dist/`**, so build first. It checks all six narratives at desktop and mobile sizes, the source registry page, keyboard disclosure behavior, JavaScript errors, missing-media handling, and horizontal overflow. It does not certify visual fidelity or a production accessibility/performance score. `npm run preview` serves the build separately.
+`test:e2e` starts a local foreground preview of **the built `dist/`**, so build first. It checks all six narratives at 320/390/768/1024/1440/1920 pixels, source credits, keyboard disclosures, JavaScript errors, missing-media handling, local links/anchors, no-JavaScript access, reduced-motion access and overflow. Desktop/mobile route screenshots are saved under ignored `test-results/`; two source-register viewport captures are retained in `docs/qa/phase-a/`. These checks do not certify final visual fidelity or a production accessibility/performance score. `npm run preview` serves the build separately.
 
 ## Routes and structure
 
@@ -44,9 +47,11 @@ A dedicated 404 page handles unknown paths on a host configured to use it. Refer
 - `src/data/narratives.ts` declares the ordered section plan for every route. Every section names its packaged reference section. Section intents are planning prose, not documentary claims. The shared `SectionPlan` is a Phase A inspection view only; finished pages require their own composed sections, layouts and media treatments.
 - `src/data/contracts.ts` defines places, articles, image credits, geography, mapped evidence and narratives. Evidence distinguishes `observed`, `historical_source` and `interpretive`.
 - `src/data/editorial.ts` retains `null` coordinates, dates, bylines, article bodies, datasets and media until real evidence exists. Null is never coerced to a map position or publication date.
-- `src/lib/evidence.ts` gates publication eligibility; `src/lib/asset-files.ts` checks actual original/derivative checksums at build time. Source metadata alone does not make an image available.
-- `src/styles/reference-tokens.css` records the map's declared palette and Instrument type families. The preview CSS has slightly different color values; these are not silently conflated. `development.css` keeps the scaffold neutral until Phase B.
+- `src/lib/registry.ts` validates registry JSON with Zod rather than a type assertion. `src/lib/evidence.ts` gates publication eligibility; `src/lib/asset-files.ts` checks originals, derivatives, stored metadata and source snapshots at build time. Source metadata alone does not make an image available.
+- `src/components/SourcePhoto.astro` renders reviewed, locally verified AVIF/WebP width sets, intrinsic dimensions, appropriate loading and credit links; missing assets render readable text. Pass an explicit `sizes` value and use `priority` only for the actual hero. Named crop recipes must exist; a missing recipe does not silently use a different crop.
+- `src/styles/reference-tokens.css` records the map's declared palette and Instrument type families. The preview CSS has slightly different values; these are documented in the audit. The development proof now uses the canonical tokens; full page composition remains Phase B/C work.
 - Instrument Serif (400 roman/italic) and Instrument Sans (400/600) are self-hosted via Fontsource. No remote font service is called. Full art direction is deferred.
+- `content/factual-sources.json` records primary research/method references with limits. `content/geography/atlas-acquisition.json` records pending atlas inputs and narrative stops, with explicitly null coordinates and geometry.
 
 ## Asset workflow
 
@@ -62,6 +67,8 @@ npm run assets:audit -- --strict
 ```
 
 Fetch/process commands may update the registry and create local evidence files. Originals belong in `assets/originals/`; responsive AVIF/WebP derivatives belong in `public/images/`. Crop approvals belong in `content/image-crops.json`. Do not upscale, invent direct source URLs, remove documentary content, or approve image publication from source-page text alone.
+
+The audit checks schema validity, original and derivative hashes, decoded dimensions, format, bytes and derivative lineage. Strict mode additionally requires all candidates to be publication-ready; it is expected to fail while the ten originals are missing. A successful non-strict audit means the missing states are consistent, not that photography acquisition succeeded.
 
 A disputed river source remains quarantined pending its location resolution. Butkara is not a Barikot excavation photograph. The museum source is a building photograph with limited resolution. Islampur village is not evidence of craft production. Contributor portraits, craft processes and audio require authentic sources and documented permission. No illustrative reference artwork is treated as a map, satellite scene or photograph.
 
