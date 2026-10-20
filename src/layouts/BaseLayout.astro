@@ -9,8 +9,9 @@ import { narratives } from '../data/narratives.ts';
 interface Props {
   title: string;
   description: string;
+  wide?: boolean;
 }
-const { title, description } = Astro.props;
+const { title, description, wide = false } = Astro.props;
 const canonical = Astro.site
   ? new URL(Astro.url.pathname, Astro.site).href
   : undefined;
@@ -55,7 +56,7 @@ const canonical = Astro.site
         </ul>
       </nav>
     </header>
-    <main id="main">
+    <main id="main" class:list={{ 'wide-main': wide }}>
       <slot />
     </main>
     <footer>
@@ -67,3 +68,10 @@ const canonical = Astro.site
     </footer>
   </body>
 </html>
+
+<style>
+  .wide-main {
+    max-width: none;
+    padding: 0;
+  }
+</style>

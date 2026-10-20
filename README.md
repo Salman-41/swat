@@ -1,4 +1,6 @@
-# SWAT — A Living Valley · Phase A
+# SWAT — A Living Valley · Editorial development
+
+**Phase B:** [Art direction implementation](ART_DIRECTION_IMPLEMENTATION.md) now specifies all six page compositions, every reference section, responsive treatments, photograph intake decisions and five distinct interactions. `/art-direction/` is a local composition study for browser review; it is not a seventh editorial page. Its layouts and typography are ready to carry into Phase C, while exact photographic crops remain blocked by unavailable originals. Exclude the study from the publication build. [Phase B verification](docs/PHASE_B_QA.md) records the current checks.
 
 An Astro and TypeScript foundation for six distinct editorial narratives. This is a working development scaffold, with explicitly unavailable publication content and media. It is not the finished design.
 
@@ -8,7 +10,7 @@ The 20 October checkpoint adds a validated source registry, responsive photograp
 
 ## Run locally
 
-Use **Node 24** (the `.nvmrc` and `.node-version` select it), or Node ≥22.22, and npm ≥9.6.5. The system Node 20 in the task environment is too old. No global packages are required.
+Use **Node 24** (the `.nvmrc` and `.node-version` select it), or Node ≥22.22, and npm ≥9.6.5. Verification used an accessible Node 24.21.0 binary because the restricted command runner could not execute the system Snap wrapper. No global packages are required.
 
 ```sh
 npm ci
@@ -29,6 +31,8 @@ npm run handoff:verify
 ```
 
 `test:e2e` starts a local foreground preview of **the built `dist/`**, so build first. It checks all six narratives at 320/390/768/1024/1440/1920 pixels, source credits, keyboard disclosures, JavaScript errors, missing-media handling, local links/anchors, no-JavaScript access, reduced-motion access and overflow. Desktop/mobile route screenshots are saved under ignored `test-results/`; two source-register viewport captures are retained in `docs/qa/phase-a/`. These checks do not certify final visual fidelity or a production accessibility/performance score. `npm run preview` serves the build separately.
+
+If port 4321 is occupied, use `SWAT_TEST_PORT=46371 npm run test:e2e`; the test runner starts its own server on that port and uses its own Node executable. The Phase B study adds browser checks for all 37 section directions, keyboard/no-JavaScript disclosures and the absence of simulated documentary media. Its desktop/mobile viewport captures are retained under `docs/qa/phase-b/`.
 
 ## Routes and structure
 

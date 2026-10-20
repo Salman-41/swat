@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  pageDirections,
+  signatureInteractions,
+} from '../data/art-direction.ts';
+import { sourceAssets } from '../lib/credits.ts';
+import '../styles/art-direction.css';
+
+const assetNames = new Map(
+  sourceAssets.map((asset) => [asset.id, asset.title]),
+);
+---
+
+<BaseLayout
+  title="Art direction study"
+  description="Local Phase B composition study for SWAT, with provisional photographic direction."
+  wide
+>
+  <div class="direction-study">
+    <section class="study-opening" aria-labelledby="study-title">
+      <p class="study-eyebrow">SWAT · Art direction study · Phase B</p>
+      <h1 id="study-title">
+        A place is never
+        <br />
+        <em>just a view.</em>
+      </h1>
+      <div class="study-opening-bottom">
+        <p>
+          An editorial rhythm of water, inhabited places and layered histories.
+        </p>
+        <a class="study-link" href="#page-directions">
+          Read the six page directions <span aria-hidden="true">↘</span>
+        </a>
+      </div>
+      <p class="study-caption">
+        Composition proof only. No original photographs are available for pixel
+        or crop approval.
+      </p>
+    </section>
+
+    <section class="study-quiet" aria-labelledby="quiet-title">
+      <p class="study-eyebrow">A quieter editorial moment</p>
+      <h2 id="quiet-title">
+        Follow its water.
+        <br />
+        Read its layers.
+        <br />
+        <em>Listen to its people.</em>
+      </h2>
+      <p class="study-offset">
+        Large type has room to breathe. A short paragraph follows at a different
+        pace, without an empty screen or a required animation. Photography will
+        carry the place; typography will carry the invitation.
+      </p>
+    </section>
+
+    <section class="study-river" aria-labelledby="river-study-title">
+      <div class="study-river-copy">
+        <p class="study-eyebrow">River index · Typographic composition</p>
+        <h2 id="river-study-title">
+          Follow the
+          <br />
+          water.
+        </h2>
+        <p>
+          A readable index comes before an interactive map. Each place will
+          connect to its own sourced context.
+        </p>
+        <ul class="study-place-list" aria-label="Place-name typography study">
+          {['Kalam', 'Bahrain', 'Madyan', 'Mingora'].map((name) => (
+            <li>{name}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="study-map-space">
+        <p class="study-eyebrow">Geography is evidence</p>
+        <h3>
+          This space
+          <br />
+          needs a source.
+        </h3>
+        <p>
+          Verified geometry and settlement locations will shape the river
+          experience. The reference curve is not a measured river.
+        </p>
+        <a class="study-link" href="/sources/#research">
+          Read the method references <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section
+      id="page-directions"
+      class="study-directions"
+      aria-labelledby="directions-title"
+    >
+      <p class="study-eyebrow">Complete page compositions</p>
+      <h2 id="directions-title">
+        Six stories.
+        <br />
+        <em>Six rhythms.</em>
+      </h2>
+      <p class="study-intro">
+        All 37 reference sections have a desktop and mobile treatment.
+        Photograph assignments are candidates; no exact crop or text-safe area
+        is approved.
+      </p>
+      <div class="study-page-list">
+        {pageDirections.map((direction) => (
+          <details class="study-page" data-page={direction.id}>
+            <summary>
+              <h3>{direction.title}</h3>
+              <span>
+                {direction.sections.length} sections{' '}
+                <span aria-hidden="true">↘</span>
+              </span>
+            </summary>
+            <div class="study-page-content">
+              <p class="study-page-opening">{direction.opening}</p>
+              <p>{direction.character}</p>
+              <a class="study-link" href={direction.route}>
+                View the current route scaffold{' '}
+                <span aria-hidden="true">↗</span>
+              </a>
+              {direction.sections.map((section) => (
+                <article
+                  class="study-section-direction"
+                  data-reference-section={section.referenceSection}
+                >
+                  <h4>{section.referenceSection}</h4>
+                  <dl>
+                    <div>
+                      <dt>Desktop composition</dt>
+                      <dd>{section.composition}</dd>
+                    </div>
+                    <div>
+                      <dt>Mobile composition</dt>
+                      <dd>{section.mobile}</dd>
+                    </div>
+                  </dl>
+                  {section.candidateAssetIds.length > 0 && (
+                    <p class="study-caption">
+                      Candidate sources:{' '}
+                      {section.candidateAssetIds.map((id, index) => (
+                        <>
+                          {index > 0 ? ' · ' : ''}
+                          <a href={`/sources/#${id}`}>{assetNames.get(id)}</a>
+                        </>
+                      ))}
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="study-interactions" aria-labelledby="interactions-title">
+      <p class="study-eyebrow">Motion follows a reader’s purpose</p>
+      <h2 id="interactions-title">
+        An action.
+        <br />
+        <em>A reason.</em>
+      </h2>
+      <p class="study-intro">
+        These are interaction specifications for later phases. The study does
+        not simulate an atlas, recording or environmental comparison.
+      </p>
+      {signatureInteractions.map((interaction) => (
+        <article class="study-interaction">
+          <h3>{interaction.title}</h3>
+          <div>
+            <p>{interaction.purpose}</p>
+            <p class="study-caption">{interaction.motion}</p>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="study-close" aria-labelledby="study-close-title">
+      <p class="study-eyebrow">The next implementation checkpoint</p>
+      <h2 id="study-close-title">
+        Let the place
+        <br />
+        <em>set the frame.</em>
+      </h2>
+      <p>
+        Photographs need to be acquired, viewed and attributed before exact
+        crops, horizons, tonal balance or overlay positions can be approved.
+        Missing portraits, craft and audio stay missing.
+      </p>
+      <a class="study-link" href="/sources/">
+        Inspect the source register <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </div>
+</BaseLayout>

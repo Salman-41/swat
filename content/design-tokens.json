@@ -13,10 +13,7 @@
       "aqua": "#A8D1CB",
       "ink": "#152A24"
     },
-    "type": [
-      "Instrument Serif (including Italic)",
-      "Instrument Sans"
-    ],
+    "type": ["Instrument Serif (including Italic)", "Instrument Sans"],
     "desktop_frame_width": 1440,
     "mobile_frame_width": 390
   },
@@ -32,11 +29,59 @@
     "storyMosaicColumns": "1.55fr 1fr",
     "cultureColumns": "1.3fr .87fr",
     "riverColumns": "48% 52%",
-    "gaps": [
-      22,
-      23,
-      25,
-      26
-    ]
+    "gaps": [22, 23, 25, 26]
+  },
+  "phaseBComposition": {
+    "status": "specified; photograph-dependent choices pending",
+    "specification": "ART_DIRECTION_IMPLEMENTATION.md",
+    "studyRoute": "/art-direction/",
+    "textMuted": "#4A6259",
+    "readingWidth": "58ch",
+    "displayLeading": 0.94,
+    "viewports": [
+      {
+        "width": 320,
+        "gutter": 20,
+        "longTitle": 64,
+        "sectionHeading": 52,
+        "body": 16
+      },
+      {
+        "width": 390,
+        "gutter": 23,
+        "longTitle": 72,
+        "sectionHeading": 56,
+        "body": 17
+      },
+      {
+        "width": 768,
+        "gutter": 35.328,
+        "longTitle": 96,
+        "sectionHeading": 72,
+        "body": 18
+      },
+      {
+        "width": 1024,
+        "gutter": 47.104,
+        "longTitle": 120,
+        "sectionHeading": 88,
+        "body": 18
+      },
+      {
+        "width": 1440,
+        "gutter": 66.24,
+        "longTitle": 159.84,
+        "sectionHeading": 112.032,
+        "body": 19
+      },
+      {
+        "width": 1920,
+        "gutter": 74,
+        "longTitle": 168,
+        "sectionHeading": 128,
+        "body": 20
+      }
+    ],
+    "note": "Long-title scale excludes the larger home Swat wordmark. The 768px quiet-study heading uses an optical 8vw reduction. Do not treat these values as photo crop coordinates."
   }
 }

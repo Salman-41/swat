@@ -2,7 +2,7 @@
    Packaged reconstructed reference, not a direct Figma export.
    preview/styles.css contains nearby but different palette values; use the map as
    the declared token contract and resolve visual differences during Phase B.
-   These tokens are reserved for Phase B; development.css remains intentionally neutral. */
+   Phase B establishes shared composition tokens. Photograph-dependent crops remain unapproved. */
 :root {
   --swat-deep: #0d211e;
   --swat-pine: #153c33;
@@ -14,5 +14,47 @@
   --swat-ink: #152a24;
   --swat-font-serif: 'Instrument Serif', Georgia, serif;
   --swat-font-sans: 'Instrument Sans', system-ui, sans-serif;
-  /* Fontsource packages provide local font files; final layout will import these tokens. */
+  --swat-text-muted: #4a6259;
+  --swat-gutter: 20px;
+  --swat-section-space: 64px;
+  --swat-type-hero: 64px;
+  --swat-type-heading: 52px;
+  --swat-type-body: 16px;
+  --swat-reading-width: 58ch;
+  --swat-display-leading: 0.94;
+}
+@media (min-width: 360px) {
+  :root {
+    --swat-gutter: 23px;
+    --swat-section-space: 80px;
+    --swat-type-hero: 72px;
+    --swat-type-heading: 56px;
+    --swat-type-body: 17px;
+  }
+}
+@media (min-width: 760px) {
+  :root {
+    --swat-gutter: clamp(23px, 4.6vw, 74px);
+    --swat-section-space: 96px;
+    --swat-type-hero: 96px;
+    --swat-type-heading: 72px;
+    --swat-type-body: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --swat-section-space: 112px;
+    --swat-type-hero: clamp(120px, 11.1vw, 168px);
+    --swat-type-heading: clamp(88px, 7.78vw, 128px);
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --swat-type-body: 19px;
+  }
+}
+@media (min-width: 1680px) {
+  :root {
+    --swat-type-body: 20px;
+  }
 }
